@@ -13,7 +13,7 @@ const posts = [
       role: 'WEB Developer',  
     },
     content: [
-      {type: 'paragraph', content:'Fala galera'},
+      {type: 'paragraph', content:'Fala galera!!'},
       {type: 'paragraph', content:'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
       {type: 'link', content:'👉 robertoBMJunior.design/doctorcare'}
     ],
@@ -28,7 +28,7 @@ const posts = [
       role: 'Professor',
     },
     content: [
-      {type: 'paragraph', content:'Ease Pessoal!!'},
+      {type: 'paragraph', content:'Eae Pessoal!!'},
       {type: 'paragraph', content:'Finalizei mais um projeto.'},
       {type: 'link', content:'👉 mayk.design'}
     ],
