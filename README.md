@@ -6,4 +6,5 @@
 
 <h3> Pra quem tiver interesse em baixar e rodar o projeto, use o comando: npm run dev </h3>
 
-![image](https://user-images.githubusercontent.com/121899636/217346773-d986a83c-365e-4596-b0df-0d46cf43a8b3.png)
+![image](https://user-images.githubusercontent.com/121899636/217356565-8a5c33ca-1ca9-4b22-bad8-f88d47e213a0.png)
+
