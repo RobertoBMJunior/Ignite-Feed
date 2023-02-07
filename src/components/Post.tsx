@@ -1,5 +1,6 @@
 import { Comment } from './Comment'
 import { Avatar } from './Avatar'
+import { ThumbsUp } from 'phosphor-react'
 import styles from './Post.module.css'
 
 import { format, formatDistanceToNow } from 'date-fns'
@@ -26,8 +27,11 @@ interface PostProps {
 
 
 export function Post ({author, publishedAt, content}: PostProps) {
+    
+    const [like, setLike] = useState(0)
+    
     const [comments, setComments] = useState([
-        'Partiu!!'
+        'O futuro é pika!'
     ])
 
     const [newCommentText, setNewCommentText] = useState('')
@@ -40,6 +44,12 @@ export function Post ({author, publishedAt, content}: PostProps) {
         locale: ptBR,
         addSuffix: true,
     })
+
+    function handleLike () {
+        setLike((state) => {
+            return state + 1
+        })
+    }
 
     function handleCreateNewComment (event: FormEvent) {
         event.preventDefault()
@@ -90,10 +100,15 @@ export function Post ({author, publishedAt, content}: PostProps) {
                         return <p key={item.content}>{item.content}</p>
                     }
                     else if(item.type === 'link') {
-                        return <p key={item.content}><a href="">{item.content}</a></p>   
+                        return <p key={item.content}><a href="https://github.com/RobertoBMJunior/Ignite-Feed" target="_blank">{item.content}</a></p>   
                     }
                })}
             </div>
+
+            <button className={styles.aplausos} onClick={handleLike}> 
+                <ThumbsUp />
+                Aplaudir<span>{like}</span>
+            </button>
 
             <form onSubmit={handleCreateNewComment} className={styles.commentForm}>
                 <strong>Deixe seu Feedback</strong>
